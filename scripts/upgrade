@@ -268,7 +268,7 @@ then
     ynh_script_progression --message="Upgrading $app with Carton..." --weight=4
     pushd "$final_path"
         ynh_secure_remove --file="$final_path/local"
-        carton install --without=sqlite --without=mysql --without=htpasswd --without=test #--deployment
+        carton install --without=mysql --without=htpasswd --without=test #--deployment --without=sqlite
     popd
 fi
 
